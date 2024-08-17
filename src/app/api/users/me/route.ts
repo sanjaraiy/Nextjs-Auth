@@ -9,9 +9,12 @@ export async function POST(request: NextRequest){
     try {
         //extract  data  from token
        const userId = await getDataFromToken(request); 
-
-      const user = User.findOne({_id: userId}).select("-password");
-      
+       console.log(userId);
+       
+       const user = await User.findOne({_id: userId}).select("-password");
+        
+       console.log(user);
+       
       if(!user){
          return NextResponse.json({error: "Invalid token"}, {status: 400});
       }
