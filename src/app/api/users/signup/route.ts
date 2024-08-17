@@ -3,6 +3,9 @@ import User from '@/models/user.Model'
 import {NextRequest, NextResponse} from 'next/server';
 import bcryptjs from 'bcryptjs';
 import { sendEmail } from "@/helpers/mailer";
+
+
+
 connect();
 
 export async function POST(request: NextRequest){
