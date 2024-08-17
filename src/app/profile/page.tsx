@@ -37,7 +37,7 @@ const logout =  async () => {
     <div className='flex flex-col items-center justify-center min-h-screen py-2'>
        <h1 className='text-4xl'>Profile page</h1>
        <hr />
-       <h2>{data ? "Nothing" : <Link href={`/profile/${data}`}>{data}</Link>}</h2>
+       <h2>{data ? <Link href={`/profile/${data}`}>{data}</Link> : "Nothing"}</h2>
        <hr />
        <button className='bg-green-500 mt-4 hover:bg-green-700 text-white font-bold py-2 px-4 rounded' onClick={logout}>logout</button>
        <button className='bg-blue-500 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={getUserDetails}>Get user details</button>
